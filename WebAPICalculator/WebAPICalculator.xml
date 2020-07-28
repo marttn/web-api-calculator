@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPICalculator</name>
+    </assembly>
+    <members>
+        <member name="T:WebAPICalculator.Controllers.OperationController">
+            <summary>
+            Operation Controller
+            </summary>
+        </member>
+        <member name="M:WebAPICalculator.Controllers.OperationController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="environment"></param>
+        </member>
+        <member name="M:WebAPICalculator.Controllers.OperationController.History">
+            <summary>
+            Returns a calculator history
+            </summary>
+            <returns>History</returns>
+            <response code="200">Returns result</response>
+        </member>
+        <member name="M:WebAPICalculator.Controllers.OperationController.Search(System.String)">
+            <summary>
+            Searches in a calculator history
+            </summary>
+            <returns>History</returns>
+            <param name="expression"></param>
+            <returns>Result</returns>
+            <response code="200">Returns result</response>
+            <response code="400">Returns 400 if the expression is incorrect</response>
+        </member>
+        <member name="M:WebAPICalculator.Controllers.OperationController.Create(System.String)">
+             <summary>
+             Calculates a mathematical expression.
+             Here are the symbols that the calculator understands:  +, -, *, / 
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Operation?expression=1%2B2
+            
+             </remarks>
+             <param name="expression"></param>
+             <returns>Result</returns>
+             <response code="201">Returns result</response>
+             <response code="400">Returns 400 if the expression is incorrect</response>
+        </member>
+    </members>
+</doc>
