@@ -86,7 +86,7 @@ namespace WebAPICalculator.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Operation>> Create(string expression)
         {
-            var regex = new Regex(@"\d+\s*\**\/*\+*\-*\^*");
+            var regex = new Regex(@"^\w\d+\s*\**\/*\+*\-*\^*");
             if (string.IsNullOrEmpty(expression) || !regex.IsMatch(expression))
                 return BadRequest();
             var e = new Expression(expression);
